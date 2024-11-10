@@ -2,6 +2,8 @@
 
 # Monitor the screen lock state to turn desk light on and off
 
+set -e
+
 dbus-monitor --session "type='signal',interface='org.freedesktop.ScreenSaver'" |
   while read x; do
     case "$x" in 

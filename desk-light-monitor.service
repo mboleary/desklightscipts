@@ -1,0 +1,9 @@
+[Unit]
+Description=Service to manage a Shelly Desk Light
+
+[Service]
+Environment="PATH=/home/brady/bin:/usr/local/sbin:/usr/local/bin:/usr/bin"
+ExecStart=%h/bin/desk_light_monitor
+
+[Install]
+WantedBy=default.target
